@@ -14,7 +14,7 @@ RUN yarn install
 COPY . /usr/src/app
 
 # Building app
-RUN yarn run build
+# RUN yarn run build
 EXPOSE 5000
 
 # Running the app
