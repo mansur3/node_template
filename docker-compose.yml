@@ -1,13 +1,22 @@
-version: "1.1"
+# version: "1.1"
+
+# services:
+#   reactjs:
+#     ports:
+#       - 6000:5000
+#     build:
+#       context: ./
+#       dockerfile: Dockerfile
+#     volumes:
+#       - .:/usr/src/app
+#       - /usr/src/app/node_modules
+#       - /usr/src/app/build
+version: "3.8"
 
 services:
-  reactjs:
-    ports:
-      - 6000:5000
+  node_app:
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
-    volumes:
-      - .:/usr/src/app
-      - /usr/src/app/node_modules
-      - /usr/src/app/build
+    ports:
+      - "3000:5000"
